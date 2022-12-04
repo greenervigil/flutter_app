@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_app/screens/ticket_view.dart';
 import 'package:flutter_app/utils/app_styles.dart';
 import 'package:gap/gap.dart';
@@ -91,7 +92,16 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             const Gap(15),
-            const TicketView(),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              padding: const EdgeInsets.only(left: 20),
+              child: Row(
+                children: const [
+                  TicketView(),
+                  TicketView(),
+                ],
+              ),
+            ),
           ],
         ));
   }
