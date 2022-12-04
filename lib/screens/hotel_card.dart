@@ -4,7 +4,8 @@ import 'package:flutter_app/utils/app_styles.dart';
 import 'package:gap/gap.dart';
 
 class HotelCard extends StatelessWidget {
-  const HotelCard({super.key});
+  final Map<String, dynamic> hotel;
+  const HotelCard({super.key, required this.hotel});
 
   @override
   Widget build(BuildContext context) {
@@ -32,24 +33,24 @@ class HotelCard extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(12),
               color: Styles.primaryColor,
-              image: const DecorationImage(
-                image: AssetImage('assets/images/logo-airplane.png'),
+              image: DecorationImage(
+                image: AssetImage("assets/images/${hotel['image']}"),
               ),
             ),
           ),
           const Gap(10),
           Text(
-            'Open Space',
+            hotel['place'],
             style: Styles.headlineStyle2.copyWith(color: Styles.copyColor),
           ),
           const Gap(10),
           Text(
-            'London',
+            hotel['destination'],
             style: Styles.headlineStyle3.copyWith(color: Colors.white),
           ),
           const Gap(10),
           Text(
-            '\$40/night',
+            '\$${hotel["price"]}/night',
             style: Styles.headlineStyle.copyWith(color: Styles.copyColor),
           ),
         ],
