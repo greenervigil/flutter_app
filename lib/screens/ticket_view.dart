@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_app/utils/app_layout.dart';
 import 'package:flutter_app/utils/app_styles.dart';
 import 'package:flutter_app/widgets/circle_container.dart';
+import 'package:gap/gap.dart';
 
 class TicketView extends StatelessWidget {
   const TicketView({super.key});
@@ -45,8 +45,6 @@ class TicketView extends StatelessWidget {
                               child: LayoutBuilder(
                                 builder: (BuildContext context,
                                     BoxConstraints constraints) {
-                                  print(
-                                      'width is ${constraints.constrainWidth()}');
                                   return Flex(
                                     direction: Axis.horizontal,
                                     mainAxisAlignment:
@@ -79,12 +77,40 @@ class TicketView extends StatelessWidget {
                       const CircleContainer(),
                       Expanded(child: Container()),
                       Text(
-                        'London',
+                        'LDN',
                         style:
                             Styles.headlineStyle3.copyWith(color: Colors.white),
                       ),
                     ],
-                  )
+                  ),
+                  const Gap(3),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SizedBox(
+                        width: 100,
+                        child: Text(
+                          'New York',
+                          style: Styles.headlineStyle4
+                              .copyWith(color: Colors.white),
+                        ),
+                      ),
+                      Text(
+                        '8H 30M',
+                        style:
+                            Styles.headlineStyle4.copyWith(color: Colors.white),
+                      ),
+                      SizedBox(
+                        width: 100,
+                        child: Text(
+                          'London',
+                          textAlign: TextAlign.end,
+                          style: Styles.headlineStyle4
+                              .copyWith(color: Colors.white),
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
