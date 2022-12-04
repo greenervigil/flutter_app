@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/screens/home_screen.dart';
 
 class BottomBar extends StatefulWidget {
   const BottomBar({super.key});
@@ -11,7 +12,7 @@ class _BottomBarState extends State<BottomBar> {
   int _selectedIndex = 0;
 
   static final List<Widget> _widgetOptions = <Widget>[
-    const Text('Home'),
+    const HomeScreen(),
     const Text('Search'),
     const Text('tickets'),
     const Text('Profile')
@@ -26,9 +27,6 @@ class _BottomBarState extends State<BottomBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Bookings'),
-      ),
       body: Center(child: _widgetOptions[_selectedIndex]),
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: _selectedIndex,
@@ -37,6 +35,7 @@ class _BottomBarState extends State<BottomBar> {
           showSelectedLabels: false,
           showUnselectedLabels: false,
           selectedItemColor: Colors.indigo,
+          type: BottomNavigationBarType.fixed,
           unselectedItemColor: Colors.blueGrey,
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
