@@ -87,7 +87,7 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ),
                     ],
-                  )
+                  ),
                 ],
               ),
             ),
@@ -99,6 +99,27 @@ class HomeScreen extends StatelessWidget {
                 children: const [
                   TicketView(),
                   TicketView(),
+                ],
+              ),
+            ),
+            const Gap(15),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Hotels',
+                    style: Styles.headlineStyle2,
+                  ),
+                  InkWell(
+                    onTap: () {},
+                    child: Text(
+                      'View All',
+                      style:
+                          Styles.textStyle.copyWith(color: Styles.primaryColor),
+                    ),
+                  ),
                 ],
               ),
             ),
