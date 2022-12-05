@@ -3,6 +3,7 @@ import 'package:flutter_app/screens/hotel_card.dart';
 import 'package:flutter_app/screens/ticket_view.dart';
 import 'package:flutter_app/utils/app_info_list.dart';
 import 'package:flutter_app/utils/app_styles.dart';
+import 'package:flutter_app/widgets/view_all_widget.dart';
 import 'package:gap/gap.dart';
 
 import '../utils/app_layout.dart';
@@ -76,22 +77,9 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   Gap(AppLayout.getHeight(40)),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Upcoming Flights',
-                        style: Styles.headlineStyle2,
-                      ),
-                      InkWell(
-                        onTap: () {},
-                        child: Text(
-                          'View All',
-                          style: Styles.textStyle
-                              .copyWith(color: Styles.primaryColor),
-                        ),
-                      ),
-                    ],
+                  const ViewAllWidget(
+                    bigText: "Upcoming Flights",
+                    smallText: "View All",
                   ),
                 ],
               ),
@@ -109,22 +97,9 @@ class HomeScreen extends StatelessWidget {
             Gap(AppLayout.getHeight(15)),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'Hotels',
-                    style: Styles.headlineStyle2,
-                  ),
-                  InkWell(
-                    onTap: () {},
-                    child: Text(
-                      'View All',
-                      style:
-                          Styles.textStyle.copyWith(color: Styles.primaryColor),
-                    ),
-                  ),
-                ],
+              child: const ViewAllWidget(
+                bigText: "Hotels",
+                smallText: "View All",
               ),
             ),
             Gap(AppLayout.getHeight(15)),

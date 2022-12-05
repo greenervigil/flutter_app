@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/utils/app_styles.dart';
 import 'package:flutter_app/widgets/icon_text_widget.dart';
+import 'package:flutter_app/widgets/view_all_widget.dart';
 import 'package:gap/gap.dart';
 
 import '../utils/app_layout.dart';
@@ -88,6 +89,11 @@ class SearchScreen extends StatelessWidget {
                 ),
               ),
             ),
+          ),
+          Gap(AppLayout.getHeight(25)),
+          const ViewAllWidget(
+            bigText: "Upcoming Flights",
+            smallText: "View All",
           ),
         ],
       ),
