@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/screens/home_screen.dart';
+import 'package:flutter_app/screens/search_screen.dart';
 
 class BottomBar extends StatefulWidget {
   const BottomBar({super.key});
@@ -13,7 +14,7 @@ class _BottomBarState extends State<BottomBar> {
 
   static final List<Widget> _widgetOptions = <Widget>[
     const HomeScreen(),
-    const Text('Search'),
+    const SearchScreen(),
     const Text('tickets'),
     const Text('Profile')
   ];
