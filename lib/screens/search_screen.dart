@@ -90,7 +90,7 @@ class SearchScreen extends StatelessWidget {
               ),
             ),
           ),
-          Gap(AppLayout.getHeight(25)),
+          Gap(AppLayout.getHeight(40)),
           const ViewAllWidget(
             bigText: "Upcoming Flights",
             smallText: "View All",
